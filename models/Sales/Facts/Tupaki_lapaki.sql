@@ -1,5 +1,5 @@
 with hosts as
-(select * from {{ref("Stg_hosts")}}),
+(select * from {{ref("stg_hosts")}}),
     listings as (select * from {{ref("listing")}})
 select name, room_type, price
 from hosts
