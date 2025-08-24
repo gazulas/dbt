@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: src_raw
+    database: airbnb
+    schema: raw
+    tables:
+      - name: raw_hosts
+      - name: raw_listings
+      - name: raw_reviews
+        freshness: 
+          error_after:
+            count: 220
+            period: day
+          warn_after:
+            count: 1
+            period: day
+        
+      
